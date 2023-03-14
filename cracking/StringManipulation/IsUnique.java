@@ -52,7 +52,7 @@ public class IsUnique {
         return false;
     }
 
-    //Solution - O(N)
+    //Solution1 - O(N)
     //256개보다 많은 문자를 순회하지 않으므로 O(1)이라고도 할 수 있다.
     //문자열이 ASCII 문자열이라는 가정 하에,
     public static boolean sol_isUniqueChar(String str) {
@@ -68,7 +68,7 @@ public class IsUnique {
         return true;
     }
 
-    //Solution2
+    //Solution2 - O(N)
     //비트 벡터 사용
     //Solution1보다 필요한 공간 1/8로 줄일 수 있음
     public static boolean sol_isUniqueChars(String str) {

@@ -1,5 +1,6 @@
 package StringManipulation;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -7,11 +8,14 @@ import java.util.Set;
 public class CheckPermutation {
     public static void main(String[] args) {
         String s1 = "kbcadaa";
-        String s2 = "abbkcad";
+        String s2 = "aabkcad";
         System.out.println(checkPermutation(s1, s2));
+
+        System.out.println(sol_permutation(s1, s2));
+        System.out.println(sol_permutation2(s1, s2));
     }
 
-    //Draft
+    //Draft - O(N)
     public static boolean checkPermutation(String s1, String s2) {
         HashMap<Character, Integer> map1 = new HashMap<>();
         HashMap<Character, Integer> map2 = new HashMap<>();
@@ -51,4 +55,42 @@ public class CheckPermutation {
         else return false;
     }
 
+    //Solution1 - O(NlogN)
+    //정렬된 두 문자열이 동일한지 체크
+    public static String sort(String s) {
+        char[] content = s.toCharArray();
+        Arrays.sort(content);
+        return new String(content);
+    }
+
+    public static boolean sol_permutation(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        return sort(s).equals(sort(t));
+    }
+
+
+    //Solution2 - O(N)
+    //문자열에 포함된 문자의 출현 횟수가 같은지 확인
+    public static boolean sol_permutation2(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        int[] letters = new int[128]; //ASCII라고 가정
+
+        char[] s_array = s.toCharArray();
+        for (char c : s_array) {
+            letters[c]++;
+        }
+        for (int i = 0; i < t.length(); i++) {
+            int c = (int) t.charAt(i);
+            letters[c]--;
+            if (letters[c] < 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
