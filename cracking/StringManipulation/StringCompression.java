@@ -1,5 +1,9 @@
 package StringManipulation;
 
+//1.6 String Compression
+//반복되는 문자의 개수를 세는 방식의 기본적인 문자열 압축 메서드 작성
+//예) 입력 : aabcccccaaa / 출력 : a2b1c5a3
+//압축된 문자열의 길이가 기존 문자열의 길이보다 길다면 기존 문자열 반환
 public class StringCompression {
     public static void main(String[] args) {
         System.out.println(compress("aabcccccaaaaaaaaaaaaaaa"));
@@ -27,7 +31,7 @@ public class StringCompression {
             }
         }
 
-        if (compressedlength >= s.length()) return s;
+        if (compressedlength > s.length()) return s;
 
         StringBuilder sb = new StringBuilder();
 
@@ -49,7 +53,7 @@ public class StringCompression {
     //Solution - O(N)
     private static String sol_compress(String str) {
         int finalLength = countCompression(str);
-        if (finalLength >= str.length()) return str;
+        if (finalLength > str.length()) return str;
 
         StringBuilder compressed = new StringBuilder(finalLength);
         int countConsecutive = 0;

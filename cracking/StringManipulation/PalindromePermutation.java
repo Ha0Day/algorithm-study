@@ -2,6 +2,9 @@ package StringManipulation;
 
 import java.util.Arrays;
 
+//1.4 Palindrome Permutation
+//주어진 문자열이 회문의 순열인지 아닌지 확인
+//예) 입력 : tact coa / 출력 : True (순열: "taco cat", "atco cta"등)
 public class PalindromePermutation {
 
     public static void main(String[] args) {
