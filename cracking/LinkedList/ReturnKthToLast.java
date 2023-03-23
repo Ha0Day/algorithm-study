@@ -15,8 +15,9 @@ public class ReturnKthToLast {
         node3.next = node4;
         node4.next = node5;
 
-        System.out.println(returnKthToLast(node1, 3)); // expected : 4
-
+        System.out.println(returnKthToLast(node1, 0).data); // expected : 4
+        System.out.println(sol_kthToLast(node1, 0).data);
+        System.out.println(sol_nthToLast(node1, 0).data);
     }
 
     //Draft
@@ -25,7 +26,7 @@ public class ReturnKthToLast {
     //Time Complexity - O(N)
     //Space Complexity - O(1)
     //N: 노드 개수
-    private static int returnKthToLast(Node head, int k) {
+    private static Node returnKthToLast(Node head, int k) {
         Node current = head;
         Node runner = current;
         int index = 0;
@@ -36,7 +37,55 @@ public class ReturnKthToLast {
             }
             current = current.next;
         }
-        if (k > index) return -1;
-        return runner.data;
+        if (k > index) return null;
+        return runner;
+    }
+
+    //Solution1 - 재귀적(recursive) 방법
+    //노드를 반환하기 위해 index의 Wrapper class 구현
+    //Time Complexity - O(N)
+    //Space Complexity - O(N)
+    static class Index {
+        public int value = 0;
+    }
+
+    public static Node sol_kthToLast(Node head, int k) {
+        Index idx = new Index();
+        return kthToLast(head, k, idx);
+    }
+
+    //계속 null 반환하다가 idx값과 k값이 일치하면 해당 노드를 끝까지 반환
+    public static Node kthToLast(Node head, int k, Index idx) {
+        if (head == null) {
+            return null;
+        }
+        Node node = kthToLast(head.next, k, idx);
+        idx.value = idx.value + 1;
+        if (idx.value == k) {
+            return head;
+        }
+        return node;
+    }
+
+    //Solution2 - 순환적(iterative) 방법
+    //Draft code와 비슷
+    //Time Complexity - O(N)
+    //Space Complexity - O(1)
+    public static Node sol_nthToLast(Node head, int k) {
+        Node p1 = head;
+        Node p2 = head;
+
+        //p1을 k노드만큼 이동시킨다.
+        for (int i = 0; i < k; i++) {
+            if (p1 == null) return null;
+            p1 = p1.next;
+        }
+
+        //p1과 p2를 함께 움직인다. p1이 끝에 도달하면, p2는 LENGTH-k번째 원소를 가리키게 된다.
+        while (p1 != null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p2;
     }
 }
