@@ -11,13 +11,25 @@ public class ZeroMatrix {
 
         printMatrix(matrix);
 
-        changeMatrix(matrix);
+        //changeMatrix(matrix);
+        sol_setZeros2(matrix);
         System.out.println();
 
         printMatrix(matrix);
     }
 
-    //Draft - O(NM)
+    private static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    //Draft
+    //Time Complexity : O(NM)
+    //Space Complexity : O(M+N)
     private static int[][] changeMatrix(int[][] matrix) {
         Set iSet = new HashSet();
         Set jSet = new HashSet();
@@ -47,12 +59,102 @@ public class ZeroMatrix {
         return matrix;
     }
 
-    private static void printMatrix(int[][] matrix){
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                System.out.print(matrix[i][j]+"\t");
+
+    //Solution1
+    //Time Complexity : O(NM)
+    //Space Complexity : O(M+N)
+    private static void sol_setZeros(int[][] matrix) {
+        boolean[] row = new boolean[matrix.length];
+        boolean[] column = new boolean[matrix[0].length];
+        //값이 0인 행과 열의 인덱스를 저장한다.
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 0) {
+                    row[i] = true;
+                    column[j] = true;
+                }
             }
-            System.out.println();
+        }
+
+        //행의 원소를 전부 0으로 바꾼다.
+        for (int i = 0; i < matrix.length; i++) {
+            if (row[i]) nullifyRow(matrix, i);
+        }
+
+        //열의 원소를 전부 0으로 바꾼다.
+        for (int j = 0; j < matrix[0].length; j++) {
+            if (column[j]) nullifyColumn(matrix, j);
+        }
+    }
+
+    private static void nullifyRow(int[][] matrix, int row) {
+        for (int j = 0; j < matrix[0].length; j++) {
+            matrix[row][j] = 0;
+        }
+    }
+
+    private static void nullifyColumn(int[][] matrix, int col) {
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][col] = 0;
+        }
+    }
+
+    //Solution2
+    //Time Complexity : O(NM)
+    //Space Complexity : O(1)
+    //첫 번째 행을 row 배열로, 첫 번째 열을 col 배열로 사용하면 공간 효율을 O(1)으로 낮출 수 있다.
+    private static void sol_setZeros2(int[][] matrix) {
+        boolean rowHasZero = false;
+        boolean colHasZero = false;
+
+        //첫 번째 행에 0이 있는지 확인
+        for (int j = 0; j < matrix[0].length; j++) {
+            if (matrix[0][j] == 0) {
+                rowHasZero = true;
+                break;
+            }
+        }
+
+        //첫 번째 열에 0이 있는지 확인
+        for (int i = 0; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) {
+                colHasZero = true;
+                break;
+            }
+        }
+
+        //나머지 배열에 0이 있는지 확인
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 1; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+            }
+        }
+
+        //첫 번째 열을 이용해서 행을 0으로 바꾼다.
+        for (int i = 1; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) {
+                nullifyRow(matrix, i);
+            }
+        }
+
+        //첫 번째 행을 이용해서 행을 0으로 바꾼다.
+        for (int j = 1; j < matrix[0].length; j++) {
+            if (matrix[0][j] == 0) {
+                nullifyColumn(matrix, j);
+            }
+        }
+
+        //첫 번째 행을 0으로 바꾼다.
+        if (rowHasZero) {
+            nullifyRow(matrix, 0);
+        }
+
+        //첫 번째 열을 0으로 바꾼다.
+        if (colHasZero) {
+            nullifyColumn(matrix, 0);
         }
     }
 }
