@@ -66,17 +66,6 @@ public class RemoveDups {
         }
     }
 
-    //For Solution code
-    public static class Node {
-        public int data;
-        public Node next;
-
-        public Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
     //Solution1
     //Time Complexity - O(N)
     //Space Complexity - O(N)
