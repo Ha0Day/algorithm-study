@@ -15,9 +15,9 @@ public class ReturnKthToLast {
         node3.next = node4;
         node4.next = node5;
 
-        System.out.println(returnKthToLast(node1, 0).data); // expected : 4
-        System.out.println(sol_kthToLast(node1, 0).data);
-        System.out.println(sol_nthToLast(node1, 0).data);
+        System.out.println(returnKthToLast(node1, 3).data); // expected : 4
+        System.out.println(sol_kthToLast(node1, 3).data);
+        System.out.println(sol_nthToLast(node1, 3).data);
     }
 
     //Draft
