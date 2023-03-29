@@ -28,6 +28,10 @@ public class EqualStacks {
 
     }
 
+    //Draft code
+    //Solution code 거의 동일
+    //Time Complexity: O(n1+n2+n3)
+    //Space Complexity: O(n1+n2+n3) for the 3 new stacks that we create.
     public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
         int[] height = new int[3];
         Stack<Integer> s1 = new Stack();
