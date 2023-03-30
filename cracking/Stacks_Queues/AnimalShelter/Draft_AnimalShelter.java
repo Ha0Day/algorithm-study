@@ -1,7 +1,6 @@
-package Stacks_Queues;
+package Stacks_Queues.AnimalShelter;
 
 import java.util.LinkedList;
-import java.util.Random;
 
 //3.6 Animal Shelter
 //먼저 들어온 동물이 먼저 나가는 동물 보호소가 있다.
@@ -11,7 +10,10 @@ import java.util.Random;
 //이 시스템을 자료구조로 구현하라
 //이 자료구조는 enqueue, dequeueAny, dequeueDog, dequeueCat의 연산을 제공해야 한다.
 //기본적으로 탑재되어 있는 LinkedList 자료구조 사용 가능
-public class AnimalShelter {
+
+
+//Draft code
+public class Draft_AnimalShelter {
 
     public static void main(String[] args) {
         AnimalShelterSystem system = new AnimalShelterSystem();
@@ -35,7 +37,6 @@ public class AnimalShelter {
 
     }
 
-    //Draft code
     static class AnimalShelterSystem {
         LinkedList<Cat> cats = new LinkedList();
         LinkedList<Dog> dogs = new LinkedList();
