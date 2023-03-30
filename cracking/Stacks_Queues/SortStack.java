@@ -9,7 +9,9 @@ import java.util.Stack;
 public class SortStack {
 
     public static void main(String[] args) {
-        MyStack stack = new MyStack();
+
+        //for Draft code
+        /*MyStack stack = new MyStack();
 
         stack.push(4);
         System.out.println(stack.peek());
@@ -49,13 +51,30 @@ public class SortStack {
 
         stack.pop();
 
-        System.out.println(stack.isEmpty());
+        System.out.println(stack.isEmpty());*/
+
+
+        //for Solution code
+        Stack s = new Stack();
+        s.push(4);
+        s.push(5);
+        s.push(1);
+        s.push(9);
+        s.push(11);
+        s.push(8);
+
+        sort(s);
+
+        while (!s.isEmpty()) {
+            System.out.println(s.pop() + " ");
+        }
     }
 
 
     //Draft code
     //시간 복잡도 O(N)
     //공간 복잡도 O(N)
+    //문제 이해를 다르게 해서 완전 다른 코드 작성..
     public static class MyStack {
         Stack<Integer> sortedStack = new Stack<>();
         Stack<Integer> tmpStack = new Stack<>();
@@ -107,6 +126,29 @@ public class SortStack {
 
         boolean isEmpty() {
             return sortedStack.isEmpty();
+        }
+    }
+
+
+    //Solution code
+    //시간 복잡도 O(N^2)
+    //공간 복잡도 O(N)
+    static void sort(Stack s) {
+        Stack<Integer> originalStack = s;
+        Stack<Integer> sortedStack = new Stack();
+
+        while (!originalStack.isEmpty()) {
+            int tmp = originalStack.pop();
+
+            while (!sortedStack.isEmpty() && sortedStack.peek() > tmp) {
+                originalStack.push(sortedStack.pop());
+            }
+            sortedStack.push(tmp);
+        }
+
+        //sortedStack은 역순으로 정렬되어 있으므로 마지막에 다시 originalStack으로 옮겨줌으로써 정렬 완료
+        while (!sortedStack.isEmpty()) {
+            originalStack.push(sortedStack.pop());
         }
     }
 }
