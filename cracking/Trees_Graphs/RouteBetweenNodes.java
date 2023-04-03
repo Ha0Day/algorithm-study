@@ -25,7 +25,7 @@ public class RouteBetweenNodes {
         //System.out.println(g.pathExistsByDfs(0, 9)); //false
         //System.out.println(g.pathExistsByDfsR(3, 1)); //false
         //System.out.println(g.pathExistsByBfs(0, 8)); //true
-        System.out.println(g.pathExistsByBfs(2, 7)); //true
+        //System.out.println(g.pathExistsByBfs2(2, 7)); //true
     }
 }
 
@@ -121,6 +121,7 @@ class Graph {
         start.marked = true;
         queue.enqueue(start);
 
+        //if문을 for문 밖에 위치. 큐에서 제거할 때 확인 절차
         while (!queue.isEmpty()) {
             Node r = queue.dequeue();
             if (r.equals(end)) return true;
@@ -128,6 +129,39 @@ class Graph {
                 if (n.marked == false) {
                     n.marked = true;
                     queue.enqueue(n);
+                }
+            }
+        }
+        return false;
+    }
+
+    //Solution
+    //위 bfs와 거의 동일
+    boolean pathExistsByBfs2(int startIndex, int lastIndex) {
+
+        //두 노드가 같으면 바로 true 반환
+        if (startIndex == lastIndex) {
+            return true;
+        }
+
+        Node start = nodes[startIndex];
+        Node end = nodes[lastIndex];
+        Queue<Node> queue = new Queue();
+
+        start.marked = true;
+        queue.enqueue(start);
+
+        //if문을 for문 안에 위치. 인접 노드 큐에 삽입 전에 확인 절차
+        while (!queue.isEmpty()) {
+            Node r = queue.dequeue();
+            for (Node n : r.adjacent) {
+                if (n.marked == false) {
+                    if (n.equals(end)) {
+                        return true;
+                    } else {
+                        n.marked = true;
+                        queue.enqueue(n);
+                    }
                 }
             }
         }
