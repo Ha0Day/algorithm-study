@@ -1,5 +1,6 @@
 package Trees_Graphs;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -38,11 +39,25 @@ public class ListOfDepths {
             }
             System.out.println();
         }
+
+        System.out.println();
+
+        ArrayList<LinkedList<Node>> lists = sol_createLevelLinkedList(n1);
+        LinkedList<Node> list2;
+
+        for (int i = 0; i < lists.size(); i++) {
+            list2 = lists.get(i);
+            for (int j = 0; j < list2.size(); j++) {
+                System.out.print(list2.get(j).data + " ");
+            }
+            System.out.println();
+        }
     }
 
     //Draft code
     //BFS 활용하여 풀이
-
+    //시간 복잡도 O(N)
+    //공간 복잡도 O(N)
     static ArrayList<Node> makeListsOfDepths(Node root) {
 
         if (root == null) {
@@ -80,5 +95,71 @@ public class ListOfDepths {
             }
         }
         return lists;
+    }
+
+    //Solution1 - 깊이 우선 탐색
+    //어떤 방법으로 순회하든 상관 없음. 현재 탐색 중인 노드의 깊이만 알 수 있으면 됨
+    //여기서는 전위 순회 알고리즘을 살짝 변형하여 풀이
+    //재귀 함수 호출 시 level+1을 인자로 넘김
+    //시간 복잡도 O(N)
+    //공간 복잡도 O(N)
+    //   - (균형 잡힌 트리의 경우) O(logN)만큼의 재귀 호출. 새로운 깊이를 탐색할 때마다 스택 사용.
+    //   - 그러나 결국 O(N)만큼의 데이터 반환해야 함.
+    static void createLevelLinkedList(Node root, ArrayList<LinkedList<Node>> lists, int level) {
+        if (root == null) return;    //base condition
+
+        LinkedList list = null;
+        if (lists.size() == level) {    //리스트에 해당 레벨이 없다.
+            list = new LinkedList();
+            /*
+            깊이가 증가하는 순서로 순회했다는 사실에 유의하자.
+            따라서 #i를 처음 마주쳤다면, 0부터 i-1번째까지는 이전에 이미 lists에 추가되어야 한다.
+            따라서 새로운 깊이 #i를 lists의 끝에 추가해도 안전하다.
+            */
+            lists.add(list);
+        } else {
+            list = lists.get(level);
+        }
+
+        list.add(root);
+        createLevelLinkedList(root.left, lists, level + 1);
+        createLevelLinkedList(root.right, lists, level + 1);
+    }
+
+    static ArrayList<LinkedList<Node>> sol_createLevelLinkedList(Node root) {
+        ArrayList<LinkedList<Node>> lists = new ArrayList<>();
+        createLevelLinkedList(root, lists, 0);
+        return lists;
+    }
+
+    //Solution2 - 너비 우선 탐색
+    //i번째 깊이에 어떤 노드들이 있는지 알아내려면, i-1번째 깊이에 있는 노드의 모든 자식 노드를 검사
+    //시간 복잡도 O(N)
+    //공간 복잡도 O(N)
+    //   - 순환적으로 구현하여 추가 공간 요구하지 않음.
+    //   - 그러나 결국 O(N)만큼의 데이터 반환해야 함.
+    ArrayList<LinkedList<Node>> sol_createLevelLinkedList2(Node root) {
+        ArrayList<LinkedList<Node>> result = new ArrayList<>();
+        //루트 방문
+        LinkedList current = new LinkedList();
+        if (root != null) {
+            current.add(root);
+        }
+
+        while (current.size() > 0) {
+            result.add(current);    //이전 깊이 추가
+            LinkedList<Node> parents = current; //다음 깊이로 진행
+            current = new LinkedList();
+            for (Node parent : parents) {
+                //자식 노드들 방문
+                if (parent.left != null) {
+                    current.add(parent.left);
+                }
+                if (parent.right != null) {
+                    current.add(parent.right);
+                }
+            }
+        }
+        return result;
     }
 }
