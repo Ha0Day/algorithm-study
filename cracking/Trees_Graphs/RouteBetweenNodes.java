@@ -1,7 +1,6 @@
 package Trees_Graphs;
 
 import java.util.LinkedList;
-import java.util.NoSuchElementException;
 import java.util.Stack;
 
 //4.1 Route Between Nodes
@@ -25,10 +24,11 @@ public class RouteBetweenNodes {
         //System.out.println(g.pathExistsByDfs(0, 9)); //false
         //System.out.println(g.pathExistsByDfsR(3, 1)); //false
         //System.out.println(g.pathExistsByBfs(0, 8)); //true
-        //System.out.println(g.pathExistsByBfs2(2, 7)); //true
+        System.out.println(g.pathExistsByBfs2(2, 7)); //true
     }
 }
 
+//Draft code
 class Graph {
 
     class Node {
@@ -169,56 +169,4 @@ class Graph {
     }
 }
 
-class Queue<T> {
-    class Node<T> {
-        private T data;
-        private Node<T> next;
-
-        public Node(T data) {
-            this.data = data;
-        }
-    }
-
-    private Node<T> first;
-    private Node<T> last;
-
-    public void enqueue(T item) {
-        Node<T> t = new Node<T>(item);
-
-        if (last != null) {
-            last.next = t;
-        }
-        last = t;
-        if (first == null) {
-            first = last;
-        }
-    }
-
-    public T dequeue() {
-        if (first == null) {
-            throw new NoSuchElementException();
-        }
-
-        T data = first.data;
-        first = first.next;
-
-        if (first == null) {
-            last = null;
-        }
-        return data;
-    }
-
-    public T peek() {
-        if (first == null) {
-            throw new NoSuchElementException();
-        }
-
-        return first.data;
-    }
-
-    public boolean isEmpty() {
-        return first == null;
-    }
-
-}
 
