@@ -6,8 +6,14 @@ public class Node {
     Node left;
     Node right;
     Node next;
+    Node parent;
 
     Node(int data) {
         this.data = data;
+    }
+
+    Node(int data, Node parent) {
+        this.data = data;
+        this.parent = parent;
     }
 }

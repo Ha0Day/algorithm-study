@@ -36,7 +36,7 @@ public class MaximumSubarray {
 
     //Brute Force - 중첩 for문
     //시간 복잡도 O(N^2)
-    //공간 복잡도 O(1) ?
+    //공간 복잡도 O(1)
     static int getMaxSubarray_BF(int[] arr) {
         int max_sum = Integer.MIN_VALUE;
         int sum = 0;
@@ -56,8 +56,8 @@ public class MaximumSubarray {
 
 
     //Brute Force2 - for문 + 재귀
-    //시간 복잡도 O(N)
-    //공간 복잡도 O(N^2) ? n의 공간을 만드는 함수를 n번 호출하므로
+    //시간 복잡도 O(N^2) 호출할 때마다 for문 돌기 때문
+    //공간 복잡도 O(N^2) n의 공간을 만드는 함수를 n번 호출하므로
     static int getMaxSubarray_BF2(int[] arr) {
         //탈출 조건
         if (arr.length == 0) {
@@ -168,7 +168,7 @@ public class MaximumSubarray {
 
     //DP (Bottom-Up)
     //시간 복잡도 O(N)
-    //공간 복잡도 O(1) ?
+    //공간 복잡도 O(1)
     static int getMaxSubarray_DP_BU(int[] arr) {
 
         //n이 가장 작은 케이스 저장

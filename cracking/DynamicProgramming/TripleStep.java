@@ -10,7 +10,6 @@ import java.util.HashMap;
 public class TripleStep {
 
     static HashMap<Integer, Integer> numsTD = new HashMap<>();
-    static HashMap<Integer, Integer> numsBU = new HashMap<>();
 
     public static void main(String[] args) {
 
@@ -63,6 +62,8 @@ public class TripleStep {
     //DP (Bottom-Up)
     //시간 복잡도 O(N)
     static int stepBU(int n) {
+        HashMap<Integer, Integer> numsBU = new HashMap<>();
+
         numsBU.put(0, 1);
         numsBU.put(1, 1);
         numsBU.put(2, 2);

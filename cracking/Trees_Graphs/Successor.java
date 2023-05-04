@@ -51,11 +51,11 @@ public class Successor {
         if (node.parent.left == node) return node.parent;
 
         //right child
-
         while (node.parent.right == node) {
             node = node.parent;
         }
         if (node == null) return null;
+
         return node.parent;
     }
 
