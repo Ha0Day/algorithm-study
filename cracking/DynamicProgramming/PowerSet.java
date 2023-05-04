@@ -28,7 +28,7 @@ public class PowerSet {
     }
 
     //Draft code
-    //시간 복잡도 O(N)
+    //시간 복잡도 O(N*2^N)
     static ArrayList<ArrayList<Integer>> getPowerSet(ArrayList<Integer> arr) {
         ArrayList<ArrayList<Integer>> lists = new ArrayList<>();
         getPowerSet(arr, lists);
