@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/additional" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructure" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/programmers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/baekjoon" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
