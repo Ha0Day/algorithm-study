@@ -5,7 +5,7 @@ package DynamicProgramming;
 // 정렬된 상태의 배열이 주어졌을 때, 마술 인덱스가 존재한다면 그 값을 찾는 메서드를 작성하라.
 // 배열 안에 중복된 값은 없다.
 // 연관 문제) 중복된 값을 허용한다면 어떻게 풀겠는가?
-public class MagicIndex {
+public class CRACK_Chap8_Q3_MagicIndex {
     public static void main(String[] args) {
         int[] arr = {-1, 0, 1, 2, 4, 7, 10};
 

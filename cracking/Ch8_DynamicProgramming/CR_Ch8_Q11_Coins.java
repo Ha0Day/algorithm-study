@@ -3,7 +3,7 @@ package DynamicProgramming;
 //8.11 Coins
 // 쿼터(25센트), 다임(10센트), 니켈(5센트), 페니(1센트)의 네 가지 동전이 무한히 주어졌을 때,
 // n센트를 표현하는 모든 방법의 수를 계산하는 코드를 작성하라.
-public class Coins {
+public class CRACK_Chap8_Q11_Coins {
 
     public static void main(String[] args) {
         int n = 35;
