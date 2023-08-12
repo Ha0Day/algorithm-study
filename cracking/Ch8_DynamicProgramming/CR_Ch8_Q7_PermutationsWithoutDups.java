@@ -1,12 +1,11 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 //8.7 Permutations without Dups
 // 문자열이 주어졌을 때 모든 경우의 순열을 계산하는 메서드를 작성하라.
 // 단, 문자는 중복되어 나타날 수 없다.
-public class PermutationsWithoutDups {
+public class CR_Ch8_Q7_PermutationsWithoutDups {
     public static void main(String[] args) {
 
         ArrayList<String> list = getPerms("abcd");

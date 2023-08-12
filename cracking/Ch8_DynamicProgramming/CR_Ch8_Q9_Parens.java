@@ -1,9 +1,9 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 //8.9 Parens
 // n-쌍의 괄호로 만들 수 있는 모든 합당한(괄호가 적절히 열리고 닫힌) 조합을 출력하는 알고리즘을 구현하라
 
-public class Parens {
+public class CR_Ch8_Q9_Parens {
 
     static int n = 3;
 

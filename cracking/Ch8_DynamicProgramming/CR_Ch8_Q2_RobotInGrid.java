@@ -1,6 +1,5 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -9,7 +8,7 @@ import java.util.HashSet;
 // 이 로봇은 오른쪽 아니면 아래쪽으로만 이동할 수 있다.
 // 하지만 어떤 셀은 '금지 구역'으로 지정되어 있어서 로봇이 접근할 수 없다.
 // 왼쪽 상단 꼭짓점에서 오른쪽 하단 꼭짓점으로의 경로를 찾는 알고리즘을 설계하라.
-public class Robot_in_a_Grid {
+public class CR_Ch8_Q2_RobotInGrid {
     public static void main(String[] args) {
         int c = 4;
         int r = 5;

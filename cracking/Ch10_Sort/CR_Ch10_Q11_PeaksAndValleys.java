@@ -1,4 +1,4 @@
-package Sort;
+package Ch10_Sort;
 
 import java.util.Arrays;
 
@@ -13,7 +13,7 @@ import java.util.Arrays;
 // 시간복잡도 - O(nlogn)
 // 부분 최적 해법
 // 정렬 후 2개씩 자리 교환하는 방법
-public class PeaksAndValleys {
+public class CR_Ch10_Q11_PeaksAndValleys {
     static int[] arr;
 
     public static void main(String[] args) {

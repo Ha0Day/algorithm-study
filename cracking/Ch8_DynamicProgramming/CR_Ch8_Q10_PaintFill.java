@@ -1,10 +1,10 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 //8.10 Paint Fill
 // 이미지 편집 프로그램에서 흔히 쓰이는 '영역 칠하기' 함수를 구현하라.
 // 영역 칠하기 함수는 화면(색이 칠해진 이차원 배열)과 그 화면상의 한 지점, 그리고 새로운 색상이 주어졌을 때,
 // 주어진 지점과 색이 같은 주변 영역을 새로운 색상으로 다시 색칠한다.
-public class CRACK_Chap8_Q10_PaintFill {
+public class CR_Ch8_Q10_PaintFill {
     public static void main(String[] args) {
         Color[][] screen = {
                 {Color.White, Color.White, Color.White, Color.White, Color.White},

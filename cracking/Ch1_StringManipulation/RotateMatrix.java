@@ -1,4 +1,4 @@
-package StringManipulation;
+package Ch1_StringManipulation;
 
 //1.7 Rotate Matrix
 //이미지를 표현하는 NxN 행렬

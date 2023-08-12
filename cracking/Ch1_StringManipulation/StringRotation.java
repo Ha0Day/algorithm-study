@@ -1,6 +1,4 @@
-package StringManipulation;
-
-import java.util.Arrays;
+package Ch1_StringManipulation;
 
 //1.9 String Rotation
 //한 단어가 다른 문자열에 포함되어 있는지 판별하는 isSubstring이라는 메서드 있음

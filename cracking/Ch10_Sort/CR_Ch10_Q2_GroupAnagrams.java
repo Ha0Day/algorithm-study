@@ -1,4 +1,4 @@
-package Sort;
+package Ch10_Sort;
 
 //10.2 Group Anagrams
 // 철자 순서만 바꾼 문자열(anagram)이 서로 인접하도록 문자열 배열을 정렬하는 메서드를 작성하라.
@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class GroupAnagrams {
+public class CR_Ch10_Q2_GroupAnagrams {
 
     public static void main(String[] args) {
         String[] arr = {"abc", "bdd", "bac", "abc", "dbd", "bdd", "ace"};

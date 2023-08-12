@@ -1,10 +1,10 @@
-package LinkedList;
+package Ch2_LinkedList;
 
 //2.7 Intersection
 // 단방향 연결리스트 두 개 주어짐
 // 이 두 리스트의 교집합 노드를 찾은 뒤 반환하는 코드를 작성하라
 // 여기서 교집합이란 노드의 값이 아니라 노드의 주소가 완전히 같은 경우를 말함
-public class Intersection {
+public class CR_Ch2_Q7_Intersection {
 
     public static void main(String[] args) {
         Node anode1 = new Node(1);

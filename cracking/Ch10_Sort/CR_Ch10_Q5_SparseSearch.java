@@ -1,9 +1,9 @@
-package Sort;
+package Ch10_Sort;
 
 //10.5 드문드문 탐색
 // 빈 문자열이 섞여 있는 정렬된 문자열 배열이 주어졌을 때, 특정 문자열의 위치를 찾는 메서드를 작성하라
 // 예) 입력: ball, {"at","","","","ball","","","car","","","dad","",""} / 출력 : 4
-public class SparseSearch {
+public class CR_Ch10_Q5_SparseSearch {
     public static void main(String[] args) {
         String[] data5 = {"apple", "", "", "banana", "", "", "", "cherry", "date", "", "elephant"};
         String target5 = "apple";

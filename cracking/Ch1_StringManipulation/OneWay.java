@@ -1,4 +1,4 @@
-package StringManipulation;
+package Ch1_StringManipulation;
 
 //1.5 One Way
 //문자열을 편집하는 방법에는 세 가지 종류가 있다 - 문자 삽입, 문자 삭제, 문자 교체

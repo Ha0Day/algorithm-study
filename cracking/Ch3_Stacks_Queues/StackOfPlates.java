@@ -1,6 +1,5 @@
-package Stacks_Queues;
+package Ch3_Stacks_Queues;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Stacks_Queues.AnimalShelter;
+package Ch3_Stacks_Queues.AnimalShelter;
 
 import java.util.LinkedList;
 

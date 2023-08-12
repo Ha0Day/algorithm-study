@@ -1,9 +1,9 @@
-package Sort;
+package Ch10_Sort;
 
 //10.1 Sorted Merge
 // 정렬된 배열 A와 B가 주어진다. A의 끝에는 B를 전부 넣을 수 있을 만큼 충분한 여유 공간이 있다.
 // B와 A를 정렬된 상태로 병합하는 메서드를 작성하라.
-public class SortedMerge {
+public class CR_Ch10_Q1_SortedMerge {
     public static void main(String[] args) {
         int a[] = new int[8];
         a[0] = 1;

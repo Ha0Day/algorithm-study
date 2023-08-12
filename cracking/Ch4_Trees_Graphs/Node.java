@@ -1,4 +1,4 @@
-package Trees_Graphs;
+package Ch4_Trees_Graphs;
 
 public class Node {
     int data;

@@ -1,4 +1,4 @@
-package StringManipulation;
+package Ch1_StringManipulation;
 
 //1.6 String Compression
 //반복되는 문자의 개수를 세는 방식의 기본적인 문자열 압축 메서드 작성

@@ -1,4 +1,4 @@
-package Sort;
+package Ch10_Sort;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 // 양의 정수가 정렬된 Listy가 주어졌을 때, 원소 x의 인덱스를 찾는 알고리즘을 작성하라.
 // 만약 x가 여러 번 등장한다면 아무거나 하나 반환하면 된다.
 
-public class SortedSearchNoSize {
+public class CR_Ch10_Q4_SortedSearchNoSize {
     public static void main(String[] args) {
         int[] arr = {2, 4, 5, 8, 10, 13};
         Listy listy = new Listy(arr);

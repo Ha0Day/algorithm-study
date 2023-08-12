@@ -1,4 +1,4 @@
-package LinkedList;
+package Ch2_LinkedList;
 
 //2.5 Sum Lists
 //연결리스트로 숫자를 표현할 때 각 노드가 자릿수 하나를 가리키는 방식으로 표현할 수 있다.
@@ -7,7 +7,7 @@ package LinkedList;
 //이런 숫자 2개가 있을 때. 이 두 수를 더하여 그 합을 연결리스트로 반환하는 함수 작성
 //예) 입력 : (7-1-6) + (5-9-2) / 출력 : 2-1-9
 //연관문제) 각 자릿수가 정상적으로 배열된다고 가정하고 같은 문제 풀어보기
-public class SumLists {
+public class CR_Ch2_Q5_SumLists {
     public static void main(String[] args) {
         Node first1 = new Node(7);
         Node first2 = new Node(1);

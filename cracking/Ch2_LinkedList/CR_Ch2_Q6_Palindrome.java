@@ -1,4 +1,4 @@
-package LinkedList;
+package Ch2_LinkedList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Stack;
 
 //2.6 Palindrome
 //주어진 연결리스트가 회문인지 검사하는 함수를 작성하라
-public class Palindrome {
+public class CR_Ch2_Q6_Palindrome {
 
     public static void main(String[] args) {
         Node node1 = new Node(1);

@@ -1,4 +1,4 @@
-package StringManipulation;
+package Ch1_StringManipulation;
 
 //1.3 URLify - 문자열의 모든 공백을 '%20'으로 바꾸는 함수
 //입력 : 문자열, 문자열의 길이 (ex. "Mr John Smith", 13)

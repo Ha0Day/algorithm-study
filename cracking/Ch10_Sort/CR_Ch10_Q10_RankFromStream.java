@@ -1,4 +1,4 @@
-package Sort;
+package Ch10_Sort;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.io.InputStream;
 // getRankOfNumber(3)=1
 // getRankOfNumber(4)=3
 
-public class RankFromStream {
+public class CR_Ch10_Q10_RankFromStream {
     static Node root;
 
     public static void main(String[] args) throws IOException {

@@ -1,10 +1,10 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 import java.util.ArrayList;
 
 //8.4 Power Set
 // 어떤 집합의 부분집합을 전부 반환하는 메서드를 작성하라.
-public class PowerSet {
+public class CR_Ch8_Q4_PowerSet {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
 

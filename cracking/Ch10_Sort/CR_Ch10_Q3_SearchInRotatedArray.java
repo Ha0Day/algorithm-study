@@ -1,10 +1,10 @@
-package Sort;
+package Ch10_Sort;
 
 //10.3 Search in Rotated Array
 // n개의 정수로 구성된 정렬 상태의 배열을 임의의 횟수만큼 회전시켜 얻은 배열이 입력으로 주어진다고 하자.
 // 이 배열에서 특정한 원소를 찾는 코드를 작성하라. 회전시키기 전, 원래 배열은 오름차순으로 정렬되어 있었다고 가정한다.
 // 입력: {15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14}에서 5를 찾으라. / 출력: 8(배열에서 5가 위치한 인덱스)
-public class SearchInRotatedArray {
+public class CR_Ch10_Q3_SearchInRotatedArray {
     public static void main(String[] args) {
         //int[] arr = {15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14};
         //int target = 5;

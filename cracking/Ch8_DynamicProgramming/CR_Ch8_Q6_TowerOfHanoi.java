@@ -1,11 +1,11 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 import java.util.Stack;
 
 //8.6 하노이 타워
 // 전형적인 하노이타원에서는 크기가 서로 다른 N개의 원반을 세 개의 기둥 중 아무 곳으로나 옮길 수 있다
 // 스택을 사용하여 모든 원반을 첫 번째 기둥에서 마지막 기둥으로 옮기는 프로그램을 작성하라
-public class TowersOfHanoi {
+public class CR_Ch8_Q6_TowerOfHanoi {
     public static void main(String[] args) {
         int n = 8;
 

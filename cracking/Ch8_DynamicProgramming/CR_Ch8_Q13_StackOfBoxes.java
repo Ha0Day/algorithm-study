@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +10,7 @@ import java.util.Comparator;
 // 단, 아래 놓인 상자의 너비, 높이, 깊이가 위에 놓인 상자의 너비, 높이, 깊이보다 더 클 때에만 가능하다.
 // 이 상자들로 쌓을 수 있는 가장 높은 탑을 구하는 메서드를 작성하라.
 // 탑의 높이는 탑을 구성하는 모든 상자 높이의 합이다.
-public class StackOfBoxes {
+public class CR_Ch8_Q13_StackOfBoxes {
     public static void main(String[] args) {
         ArrayList<Box> boxes = new ArrayList<>();
 

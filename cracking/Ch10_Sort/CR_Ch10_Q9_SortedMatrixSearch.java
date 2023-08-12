@@ -1,8 +1,8 @@
-package Sort;
+package Ch10_Sort;
 
 //10.9 Sorted Matrix Search
 // 각 행과 열이 오름차순으로 정렬된 MxN 행렬이 주어졌을 때, 특정한 원소를 찾는 메서드를 구현하라.
-public class SortedMatrixSearch {
+public class CR_Ch10_Q9_SortedMatrixSearch {
     static int N, M;
 
     public static void main(String[] args) {

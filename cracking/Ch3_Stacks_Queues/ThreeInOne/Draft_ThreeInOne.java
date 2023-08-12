@@ -1,4 +1,4 @@
-package Stacks_Queues.ThreeInOne;
+package Ch3_Stacks_Queues.ThreeInOne;
 
 //3.1 Three in One
 //배열 한 개로 스택 세 개를 어떻게 구현할지 설명하라

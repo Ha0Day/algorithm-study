@@ -1,4 +1,4 @@
-package Trees_Graphs;
+package Ch4_Trees_Graphs;
 
 //4.6 Successor
 // 이진 탐색 트리에서 주어진 노드의 '다음' 노드(중위 후속자)를 찾는 알고리즘을 작성하라.

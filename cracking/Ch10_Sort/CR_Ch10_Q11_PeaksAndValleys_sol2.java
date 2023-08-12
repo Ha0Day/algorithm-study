@@ -1,4 +1,4 @@
-package Sort;
+package Ch10_Sort;
 
 import java.util.Arrays;
 
@@ -13,7 +13,7 @@ import java.util.Arrays;
 // 시간복잡도 - O(n)
 // 최적 해법
 // 3개씩 잘라서 봐서 3개 중 최댓값이 가운데로 오게 하는 방법
-public class PeaksAndValleys2 {
+public class CR_Ch10_Q11_PeaksAndValleys_sol2 {
     static int[] arr;
 
     public static void main(String[] args) {

@@ -1,13 +1,12 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
 //8.1 Triple Step
 // 한번에 1 또는 2 또는 3계단을 오를 수 있다.
 // n개의 계단을 오르는 방법이 몇 가지 있는지 계산하는 메서드를 구현하라.
-public class TripleStep {
+public class CR_Ch8_Q1_TripleStep {
 
     static HashMap<Integer, Integer> numsTD = new HashMap<>();
 

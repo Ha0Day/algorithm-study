@@ -1,9 +1,9 @@
-package LinkedList;
+package Ch2_LinkedList;
 
 //2.3 Delete Middle Node
 //단방향 연결리스트가 주어졌을 때 중간에 있는 노드 하나를 삭제하는 알고리즘 구현
 //단, 삭제할 노드에만 접근 가능
-public class DeleteMiddleNode {
+public class CR_Ch2_Q3_DeleteMiddleNode {
     public static void main(String[] args) {
         Node node1 = new Node(1);
         Node node2 = new Node(2);

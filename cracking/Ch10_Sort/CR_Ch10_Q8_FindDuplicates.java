@@ -1,10 +1,10 @@
-package Sort;
+package Ch10_Sort;
 
 //10.8 Find Duplicates
 // 1부터 N(<=32,000)까지의 숫자로 이루어진 배열이 있다.
 // 배열엔 중복된 숫자가 나타날 수 있고, N이 무엇인지는 알 수 없다.
 // 사용 가능한 메모리가 4KB일 때, 중복된 원소를 모두 출력하려면 어떻게 해야 할까?
-public class FindDuplicates {
+public class CR_Ch10_Q8_FindDuplicates {
     public static void main(String[] args) {
         int[] arr = {1, 2, 6, 9, 10, 154, 5324, 3, 4689, 12346, 1354, 1, 154, 3427};
 

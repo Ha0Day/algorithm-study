@@ -1,4 +1,4 @@
-package Trees_Graphs;
+package Ch4_Trees_Graphs;
 
 //2.2 Minimal Tree
 // 오름차순으로 정렬된 배열이 있다.

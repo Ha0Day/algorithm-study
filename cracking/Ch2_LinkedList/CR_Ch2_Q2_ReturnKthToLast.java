@@ -1,8 +1,8 @@
-package LinkedList;
+package Ch2_LinkedList;
 
 //2.2 Return Kth to Last
 //단방향 연결리스트가 주어졌을 때 뒤에서 k번째 원소를 찾는 알고리즘을 구현하라
-public class ReturnKthToLast {
+public class CR_Ch2_Q2_ReturnKthToLast {
     public static void main(String[] args) {
         Node node1 = new Node(1);
         Node node2 = new Node(2);

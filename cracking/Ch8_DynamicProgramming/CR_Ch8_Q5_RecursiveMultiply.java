@@ -1,9 +1,9 @@
-package DynamicProgramming;
+package Ch8_DynamicProgramming;
 
 //8.5 Recursive Multiply
 // 연산자를 사용하지 않고 양의 정수 두 개를 곱하는 재귀 함수를 작성하라.
 // 덧셈, 뺄셈, 비트 시프팅 연산자를 사용할 수 있지만 이들의 사용 횟수를 최소화해야 한다.
-public class RecursiveMultiply {
+public class CR_Ch8_Q5_RecursiveMultiply {
     public static void main(String[] args) {
         System.out.println(multiply(16, 1));
         System.out.println(multiply(1, 2));

@@ -1,4 +1,4 @@
-package Stacks_Queues.ThreeInOne;
+package Ch3_Stacks_Queues.ThreeInOne;
 
 import java.util.EmptyStackException;
 
