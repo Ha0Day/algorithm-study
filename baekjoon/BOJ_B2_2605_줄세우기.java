@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Q2605 {
+public class BOJ_B2_2605_줄세우기 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

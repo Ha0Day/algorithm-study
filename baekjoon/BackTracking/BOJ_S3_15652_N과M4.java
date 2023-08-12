@@ -3,7 +3,7 @@ package BackTracking;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q15651 {
+public class BOJ_S3_15652_N과M4 {
 
     static int N;
     static int M;
@@ -18,11 +18,12 @@ public class Q15651 {
 
         arr = new int[M];
 
-        getSequence(0);
+        getSequence(0, 1);
         System.out.print(sb);
+
     }
 
-    static void getSequence(int index) {
+    static void getSequence(int index, int at) {
 
         if (index == M) {
             for (int j = 0; j < arr.length; j++) {
@@ -32,9 +33,9 @@ public class Q15651 {
             return;
         }
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = at; i <= N; i++) {
             arr[index] = i;
-            getSequence(index + 1);
+            getSequence(index + 1, i);
         }
     }
 }

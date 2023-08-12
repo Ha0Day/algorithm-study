@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Q1204_최빈수구하기 {
+public class SWEA_D2_1204_최빈수구하기 {
     static int T;
     static int NUM = 1000;
     static int SCORE = 100;

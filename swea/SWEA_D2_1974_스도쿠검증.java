@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-public class Q1974_스도쿠검증 {
+public class SWEA_D2_1974_스도쿠검증 {
     static int T;
     static int N = 9;
     static int[][] arr = new int[N][N];

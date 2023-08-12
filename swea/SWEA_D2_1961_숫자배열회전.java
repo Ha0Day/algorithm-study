@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Q1961_숫자배열회전 {
+public class SWEA_D2_1961_숫자배열회전 {
     static int T;
 
     public static void main(String[] args) throws IOException {

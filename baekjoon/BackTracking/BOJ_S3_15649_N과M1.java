@@ -3,7 +3,7 @@ package BackTracking;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q15649 {
+public class BOJ_S3_15649_N과M1 {
 
     static BufferedWriter bw;
 

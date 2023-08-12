@@ -3,7 +3,7 @@ package Greedy;
 import java.io.*;
 import java.util.*;
 
-public class Q11047 {
+public class BOJ_S4_11047_동전0 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");

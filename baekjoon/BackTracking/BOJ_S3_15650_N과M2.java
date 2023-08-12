@@ -3,7 +3,7 @@ package BackTracking;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q15650 {
+public class BOJ_S3_15650_N과M2 {
 
     static int N;
     static int M;

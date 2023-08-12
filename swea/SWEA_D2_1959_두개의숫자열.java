@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Q1959_두개의숫자열 {
+public class SWEA_D2_1959_두개의숫자열 {
     static int T;
     static int N, M;
 

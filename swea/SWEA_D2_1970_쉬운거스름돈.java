@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Q1970_쉬운거스름돈 {
+public class SWEA_D2_1970_쉬운거스름돈 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

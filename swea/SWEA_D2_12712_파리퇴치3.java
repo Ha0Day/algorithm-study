@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Q12712_파리퇴치3 {
+public class SWEA_D2_12712_파리퇴치3 {
     static int T;
     static int N;
     static int M;

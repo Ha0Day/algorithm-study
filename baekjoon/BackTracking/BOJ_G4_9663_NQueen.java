@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Q9663 {
+public class BOJ_G4_9663_NQueen {
     static int N;
     static int count;
     static int[] arr;
