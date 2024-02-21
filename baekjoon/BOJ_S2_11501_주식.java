@@ -11,7 +11,7 @@ public class BOJ_S2_11501_주식 {
 
         for (int t = 1; t <= T; t++) {
             long profit = 0; //이익
-            int days = Integer.parseInt(br.readLine());
+            int days = Integer.parseInt(br.readLine()); //날
             int[] price = new int[days]; //날 별 주가
             int max = Integer.MIN_VALUE; //현재 최대 주가
             StringTokenizer st = new StringTokenizer(br.readLine());
