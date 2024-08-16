@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 //dfs 후 상태 원상복구해야 함
 //deep copy 사용
 //배열 복사본 만들어서 매개변수로 넘김 - 추천 x (메모리 사용을 많이 함)
-public class BOJ_G4_15683_감시 {
+public class BOJ_G3_15683_감시 {
     static int N, M;
     static int[][] map;
     static ArrayList<CCTV> cameras;

@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 //dfs 후 상태 원상복구해야 함
 //deep copy 사용
 //원본을 복사해뒀다가 dfs 끝나고 돌아올 때 복사해둔 원본으로 되돌림
-public class BOJ_G4_15683_감시_sol2 {
+public class BOJ_G3_15683_감시_sol2 {
     static int N, M;
     static int[][] map;
     static ArrayList<CCTV> cameras;

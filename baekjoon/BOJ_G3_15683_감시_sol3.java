@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 //dfs 후 상태 원상복구해야 함
 //deep copy 사용하지 않고
 //원본 map 자체를 계속 바꿈
-public class BOJ_G4_15683_감시_sol3 {
+public class BOJ_G3_15683_감시_sol3 {
     static int n;
     static int m;
     static int blindSpot;
